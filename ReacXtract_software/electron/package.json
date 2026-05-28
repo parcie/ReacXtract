@@ -1,0 +1,61 @@
+{
+  "name": "reacxtract",
+  "version": "1.0.0",
+  "description": "Reaction extraction desktop application",
+  "main": "main.js",
+  "author": "Fangyi Chen",
+  "license": "MIT",
+
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "dist": "electron-builder --win"
+  },
+
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.13.3"
+  },
+
+  "build": {
+    "appId": "com.reacxtract.app",
+
+    "productName": "ReacXtract",
+
+    "directories": {
+      "output": "dist"
+    },
+
+    "files": [
+      "**/*",
+      "!node_modules/.cache/**/*"
+    ],
+
+    "extraResources": [
+      {
+        "from": "../backend/dist/ReacXtract.exe",
+        "to": "ReacXtract.exe"
+      }
+    ],
+
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+
+      "icon": "icon.ico"
+    },
+
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}

@@ -1,0 +1,32 @@
+﻿# PyCharm
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+
+# Node.js / Electron
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+build/
+*.exe
+*.blockmap
+win-unpacked/
+
+# Backend build
+ReacXtract_software/backend/build/
+ReacXtract_software/backend/dist/
+
+# Electron build
+ReacXtract_software/electron/dist/
+
+# Logs
+*.log

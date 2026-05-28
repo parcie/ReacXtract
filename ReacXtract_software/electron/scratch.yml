@@ -1,0 +1,21 @@
+appId: com.reacxtract.app
+
+productName: ReacXtract
+
+directories:
+  output: release
+
+files:
+  - "**/*"
+
+extraResources:
+  - from: "../backend/dist/ReacXtract.exe"
+    to: "ReacXtract.exe"
+
+win:
+  target:
+    - nsis
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
