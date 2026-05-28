@@ -1,3 +1,4 @@
+## ReacXtract
 ReacXtract is a multimodal LLM-based System for Automated Chemical Reaction Extraction from Scientific Documents
 ReacXtract is a research-oriented software framework for extracting structured chemical reaction information from heterogeneous scientific documents. It integrates rule-based preprocessing with large language models (LLMs) to convert unstructured chemical literature into standardized, machine-readable reaction representations.
 
@@ -67,38 +68,38 @@ ReacXtract
 	'''`ReacXtract Setup.exe`'''
 	Waits for FastAPI service to be available (`127.0.0.1:8000`)
 	For developers to o run backend manually and launch desktop app under dev mode
-```bash
+''' bash
 	uvicorn app:app --host 127.0.0.1 --port 8000
 	npm install
 	npm start
-```
+'''
 
 2. package installation & using
 	Clone repository
-```bash
-	# clone repository
-	git clone https://github.com/yourname/ReacXtract.git
-	cd ReacXtract
-	# create environment
-	conda create -n reacxtract python=3.10
-	conda activate reacxtract
-	# instal dependencies
-	pip install -r requirements.txt
-```
+	```bash
+		# clone repository
+		git clone https://github.com/yourname/ReacXtract.git
+		cd ReacXtract
+		# create environment
+		conda create -n reacxtract python=3.10
+		conda activate reacxtract
+		# instal dependencies
+		pip install -r requirements.txt
+	```
 	API key setup
-```bash
-	export OPENAI_API_KEY="your_api_key"
-```
+	```bash
+		export OPENAI_API_KEY="your_api_key"
+	```
 	for python usage
-```python
-	from core import whole_pipeline
-
-results = whole_pipeline(
-    api_key="YOUR_API_KEY",
-    file_list=["paper.pdf", "patent.xml"],
-    output_file="reactions.json"
-)
-```
+	```python
+		from core import whole_pipeline
+	
+		results = whole_pipeline(
+	    api_key="YOUR_API_KEY",
+	    file_list=["paper.pdf", "patent.xml"],
+	    output_file="reactions.json"
+	)
+	```
 
 ## Proprietary Components
 The CDX parsing and reaction extraction functionality in this project is based on collaborative development with an industrial partner.
