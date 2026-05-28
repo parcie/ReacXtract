@@ -63,43 +63,48 @@ ReacXtract
 	(Electron App + FastAPI Backend)
   
 ## Installation
-1. desktop application
-	Download and install the application via:
-	'''`ReacXtract Setup.exe`'''
-	Waits for FastAPI service to be available (`127.0.0.1:8000`)
-	For developers to o run backend manually and launch desktop app under dev mode
-''' bash
-	uvicorn app:app --host 127.0.0.1 --port 8000
-	npm install
-	npm start
-'''
+### 1. desktop application
+   
+- **`ReacXtract.exe`** — for direct running (backend only)
+- **`ReacXtract Setup 1.0.0.exe`** — for complete desktop application installation package (including the interface)
+> The application waits for the FastAPI service to be available (`127.0.0.1:8000`)
+For developers to o run backend manually and launch desktop app under dev mode
+```bash
+# Start backend
+uvicorn app:app --host 127.0.0.1 --port 8000
 
-2. package installation & using
-	Clone repository
-	```bash
-		# clone repository
-		git clone https://github.com/yourname/ReacXtract.git
-		cd ReacXtract
-		# create environment
-		conda create -n reacxtract python=3.10
-		conda activate reacxtract
-		# instal dependencies
-		pip install -r requirements.txt
-	```
-	API key setup
-	```bash
-		export OPENAI_API_KEY="your_api_key"
-	```
-	for python usage
-	```python
-		from core import whole_pipeline
-	
-		results = whole_pipeline(
-	    api_key="YOUR_API_KEY",
-	    file_list=["paper.pdf", "patent.xml"],
-	    output_file="reactions.json"
-	)
-	```
+# Start frontend (in electron folder)
+npm install
+npm start
+```
+
+### 2. package installation & using
+Clone repository
+```bash
+# clone repository
+git clone https://github.com/yourname/ReacXtract.git
+cd ReacXtract
+# create environment
+conda create -n reacxtract python=3.10
+conda activate reacxtract
+# instal dependencies
+pip install -r requirements.txt
+```
+
+API key setup
+```bash
+export OPENAI_API_KEY="your_api_key"
+```
+
+for python usage
+```python
+from core import whole_pipeline
+results = whole_pipeline(
+api_key="YOUR_API_KEY",
+file_list=["paper.pdf", "patent.xml"],
+output_file="reactions.json"
+)
+```
 
 ## Proprietary Components
 The CDX parsing and reaction extraction functionality in this project is based on collaborative development with an industrial partner.
