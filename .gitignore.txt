@@ -1,0 +1,42 @@
+```gitignore
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual env
+.venv/
+venv/
+env/
+
+# Build
+build/
+dist/
+
+# Electron
+out/
+release/
+
+# Node
+node_modules/
+
+# IDE
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+apikey.txt
+
+# Executables
+*.exe
+*.dll
+```
