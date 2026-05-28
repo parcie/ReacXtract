@@ -23,20 +23,21 @@ The system supports multiple document formats and is distributed as a **desktop 
 - **Automatic backend orchestration**
 	Python FastAPI service is launched and managed by the desktop application
 ## Project Architecture
- ReacXtract
-    ├── core.py              # Core pipeline
-    ├── app.py               # FastAPI backend service
-    ├── main.js              # Electron desktop launcher
-    ├── index.html           # Frontend UI
-    ├── PDF_full_process.py  # PDF pipeline
-    ├── XML_full_process.py  # XML pipeline
-    ├── TXT_full_process.py  # TXT pipeline
-    └── tools/               # Parsing + AI utilities
-        ├── PDF_reading/
-        ├── XML_reading/
-        ├── TXT_reading/
-        ├── CDX_reading/
-        └── AI_interaction/
+```text
+ReacXtract
+├── core.py                  # Core pipeline
+├── main.js                  # Electron desktop launcher
+├── pipeline/
+│   ├── XML_full_process.py  # XML pipeline
+│   ├── TXT_full_process.py  # TXT pipeline
+│   └── PDF_full_process.py  # PDF pipeline
+└── tools/
+    ├── CDX_reading/
+    ├── PDF_reading/
+    ├── XML_reading/
+    ├── TXT_reading/
+    └── AI_interaction/
+```
 ## System workflow
 	Scientific Documents
 	(PDF / XML / TXT / CDX)
