@@ -100,9 +100,9 @@ for python usage
 ```python
 from core import whole_pipeline
 results = whole_pipeline(
-api_key="YOUR_API_KEY",
-file_list=["paper.pdf", "patent.xml"],
-output_file="reactions.json"
+	api_key="YOUR_API_KEY",
+	file_list=["paper.pdf", "patent.xml"],
+	output_file="reactions.json"
 )
 ```
 
